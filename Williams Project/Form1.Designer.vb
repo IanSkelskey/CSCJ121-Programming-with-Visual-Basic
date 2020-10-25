@@ -36,6 +36,7 @@ Partial Class frmMain
         Me.btnExit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtTotal = New System.Windows.Forms.TextBox()
+        Me.btnClear = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -116,7 +117,7 @@ Partial Class frmMain
         Me.chkLocal.Location = New System.Drawing.Point(6, 98)
         Me.chkLocal.Name = "chkLocal"
         Me.chkLocal.Size = New System.Drawing.Size(127, 17)
-        Me.chkLocal.TabIndex = 3
+        Me.chkLocal.TabIndex = 7
         Me.chkLocal.Text = "Local stations ($6.00)"
         Me.chkLocal.UseVisualStyleBackColor = True
         '
@@ -126,7 +127,7 @@ Partial Class frmMain
         Me.chkShow.Location = New System.Drawing.Point(6, 75)
         Me.chkShow.Name = "chkShow"
         Me.chkShow.Size = New System.Drawing.Size(117, 17)
-        Me.chkShow.TabIndex = 2
+        Me.chkShow.TabIndex = 6
         Me.chkShow.Text = "Showtimer ($10.50)"
         Me.chkShow.UseVisualStyleBackColor = True
         '
@@ -136,7 +137,7 @@ Partial Class frmMain
         Me.chkHBI.Location = New System.Drawing.Point(6, 52)
         Me.chkHBI.Name = "chkHBI"
         Me.chkHBI.Size = New System.Drawing.Size(157, 17)
-        Me.chkHBI.TabIndex = 1
+        Me.chkHBI.TabIndex = 5
         Me.chkHBI.Text = "HBI movie channels ($9.50)"
         Me.chkHBI.UseVisualStyleBackColor = True
         '
@@ -146,7 +147,7 @@ Partial Class frmMain
         Me.chkCinema.Location = New System.Drawing.Point(6, 29)
         Me.chkCinema.Name = "chkCinema"
         Me.chkCinema.Size = New System.Drawing.Size(185, 17)
-        Me.chkCinema.TabIndex = 0
+        Me.chkCinema.TabIndex = 4
         Me.chkCinema.Text = "Cinematic movie channels ($9.50)"
         Me.chkCinema.UseVisualStyleBackColor = True
         '
@@ -155,16 +156,17 @@ Partial Class frmMain
         Me.btnCalc.Location = New System.Drawing.Point(295, 149)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(75, 23)
-        Me.btnCalc.TabIndex = 2
+        Me.btnCalc.TabIndex = 9
         Me.btnCalc.Text = "&Calculate"
         Me.btnCalc.UseVisualStyleBackColor = True
         '
         'btnExit
         '
+        Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnExit.Location = New System.Drawing.Point(244, 149)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(45, 23)
-        Me.btnExit.TabIndex = 3
+        Me.btnExit.TabIndex = 8
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -184,6 +186,16 @@ Partial Class frmMain
         Me.txtTotal.ReadOnly = True
         Me.txtTotal.Size = New System.Drawing.Size(100, 20)
         Me.txtTotal.TabIndex = 5
+        Me.txtTotal.TabStop = False
+        '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(375, 149)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(66, 23)
+        Me.btnClear.TabIndex = 10
+        Me.btnClear.Text = "Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
         '
         'frmMain
         '
@@ -191,13 +203,15 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
-        Me.ClientSize = New System.Drawing.Size(382, 180)
+        Me.ClientSize = New System.Drawing.Size(454, 180)
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnCalc)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmMain"
         Me.Text = "Williams Cable Company"
         Me.GroupBox1.ResumeLayout(False)
@@ -223,4 +237,5 @@ Partial Class frmMain
     Friend WithEvents btnExit As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents txtTotal As TextBox
+    Friend WithEvents btnClear As Button
 End Class
