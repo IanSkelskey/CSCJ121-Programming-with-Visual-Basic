@@ -19,53 +19,93 @@
         'Stuff to do when the form loads. Perhaps a welcome message?
     End Sub
 
-    'The code below determines what happens when you click calculate.
-    'Most of this program will be written here.
-    Private Sub btnCalc_Click(sender As Object, e As EventArgs) Handles btnCalc.Click
-        dblTotal = 0 'reset the total to zero for new calculations
-
-        'Check radio buttons using If and ElseIf for cable package
-        If radBasic.Checked = True Then
-            dblTotal += BASIC_CHARGE
-        ElseIf radSilver.Checked = True Then
-            dblTotal += SILVER_CHARGE
-        ElseIf radGold.Checked = True Then
-            dblTotal += GOLD_CHARGE
-        ElseIf radDiamond.Checked = True Then
-            dblTotal += DIAMOND_CHARGE
-        End If
-
-        'Check checkboxes using If statements for additional charges
-        If chkCinema.Checked = True Then
-            dblTotal += CINEMA_CHARGE
-        End If
-        If chkHBI.Checked = True Then
-            dblTotal += HBI_CHARGE
-        End If
-        If chkShow.Checked = True Then
-            dblTotal += SHOW_CHARGE
-        End If
-        If chkLocal.Checked = True Then
-            dblTotal += LOCAL_CHARGE
-        End If
-
-        txtTotal.Text = dblTotal.ToString("C2")
-    End Sub
-
-    'Exit button to close form.
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
     End Sub
 
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        dblTotal = 0
-        txtTotal.Text = ""
+        txtTotal.Text = BASIC_CHARGE.ToString("C2")
+        radBasic.Checked = True
+        chkCinema.Checked = False
+        chkHBI.Checked = False
+        chkShow.Checked = False
+        chkLocal.Checked = False
+
     End Sub
 
-    'The question asks that I implement the CheckChanged feature for both
-    'the radio buttons and check boxes. I want to look into this.
+    'Implement CheckedChanged
+    'Most of this program will be written here.
+    Dim strActive As String
+
     Private Sub radBasic_CheckedChanged(sender As Object, e As EventArgs) Handles radBasic.CheckedChanged
-
+        If radBasic.Checked = True Then
+            dblTotal += BASIC_CHARGE
+        Else
+            dblTotal -= BASIC_CHARGE
+        End If
+        txtTotal.Text = dblTotal.ToString("C2")
     End Sub
 
+    Private Sub radSilver_CheckedChanged(sender As Object, e As EventArgs) Handles radSilver.CheckedChanged
+        If radSilver.Checked = True Then
+            dblTotal += SILVER_CHARGE
+        Else
+            dblTotal -= SILVER_CHARGE
+        End If
+        txtTotal.Text = dblTotal.ToString("C2")
+    End Sub
+
+    Private Sub radGold_CheckedChanged(sender As Object, e As EventArgs) Handles radGold.CheckedChanged
+        If radGold.Checked = True Then
+            dblTotal += GOLD_CHARGE
+        Else
+            dblTotal -= GOLD_CHARGE
+        End If
+        txtTotal.Text = dblTotal.ToString("C2")
+    End Sub
+
+    Private Sub radDiamond_CheckedChanged(sender As Object, e As EventArgs) Handles radDiamond.CheckedChanged
+        If radDiamond.Checked = True Then
+            dblTotal += DIAMOND_CHARGE
+        Else
+            dblTotal -= DIAMOND_CHARGE
+        End If
+        txtTotal.Text = dblTotal.ToString("C2")
+    End Sub
+
+    Private Sub chkCinema_CheckedChanged(sender As Object, e As EventArgs) Handles chkCinema.CheckedChanged
+        If chkCinema.Checked = True Then
+            dblTotal += CINEMA_CHARGE
+        Else
+            dblTotal -= CINEMA_CHARGE
+        End If
+        txtTotal.Text = dblTotal.ToString("C2")
+    End Sub
+
+    Private Sub chkHBI_CheckedChanged(sender As Object, e As EventArgs) Handles chkHBI.CheckedChanged
+        If chkHBI.Checked = True Then
+            dblTotal += HBI_CHARGE
+        Else
+            dblTotal -= HBI_CHARGE
+        End If
+        txtTotal.Text = dblTotal.ToString("C2")
+    End Sub
+
+    Private Sub chkShow_CheckedChanged(sender As Object, e As EventArgs) Handles chkShow.CheckedChanged
+        If chkShow.Checked = True Then
+            dblTotal += SHOW_CHARGE
+        Else
+            dblTotal -= SHOW_CHARGE
+        End If
+        txtTotal.Text = dblTotal.ToString("C2")
+    End Sub
+
+    Private Sub chkLocal_CheckedChanged(sender As Object, e As EventArgs) Handles chkLocal.CheckedChanged
+        If chkLocal.Checked = True Then
+            dblTotal += LOCAL_CHARGE
+        Else
+            dblTotal -= LOCAL_CHARGE
+        End If
+        txtTotal.Text = dblTotal.ToString("C2")
+    End Sub
 End Class

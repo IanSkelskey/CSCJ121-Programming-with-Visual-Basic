@@ -28,15 +28,14 @@ Partial Class frmMain
         Me.radSilver = New System.Windows.Forms.RadioButton()
         Me.radBasic = New System.Windows.Forms.RadioButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.chkLocal = New System.Windows.Forms.CheckBox()
         Me.chkShow = New System.Windows.Forms.CheckBox()
         Me.chkHBI = New System.Windows.Forms.CheckBox()
         Me.chkCinema = New System.Windows.Forms.CheckBox()
-        Me.btnCalc = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.btnClear = New System.Windows.Forms.Button()
+        Me.chkLocal = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -111,16 +110,6 @@ Partial Class frmMain
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Additional features"
         '
-        'chkLocal
-        '
-        Me.chkLocal.AutoSize = True
-        Me.chkLocal.Location = New System.Drawing.Point(6, 98)
-        Me.chkLocal.Name = "chkLocal"
-        Me.chkLocal.Size = New System.Drawing.Size(127, 17)
-        Me.chkLocal.TabIndex = 7
-        Me.chkLocal.Text = "Local stations ($6.00)"
-        Me.chkLocal.UseVisualStyleBackColor = True
-        '
         'chkShow
         '
         Me.chkShow.AutoSize = True
@@ -151,19 +140,10 @@ Partial Class frmMain
         Me.chkCinema.Text = "Cinematic movie channels ($9.50)"
         Me.chkCinema.UseVisualStyleBackColor = True
         '
-        'btnCalc
-        '
-        Me.btnCalc.Location = New System.Drawing.Point(295, 149)
-        Me.btnCalc.Name = "btnCalc"
-        Me.btnCalc.Size = New System.Drawing.Size(75, 23)
-        Me.btnCalc.TabIndex = 9
-        Me.btnCalc.Text = "&Calculate"
-        Me.btnCalc.UseVisualStyleBackColor = True
-        '
         'btnExit
         '
         Me.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnExit.Location = New System.Drawing.Point(244, 149)
+        Me.btnExit.Location = New System.Drawing.Point(247, 149)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(45, 23)
         Me.btnExit.TabIndex = 8
@@ -190,25 +170,33 @@ Partial Class frmMain
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(375, 149)
+        Me.btnClear.Location = New System.Drawing.Point(298, 149)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(66, 23)
         Me.btnClear.TabIndex = 10
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
+        'chkLocal
+        '
+        Me.chkLocal.AutoSize = True
+        Me.chkLocal.Location = New System.Drawing.Point(6, 98)
+        Me.chkLocal.Name = "chkLocal"
+        Me.chkLocal.Size = New System.Drawing.Size(127, 17)
+        Me.chkLocal.TabIndex = 7
+        Me.chkLocal.Text = "Local stations ($6.00)"
+        Me.chkLocal.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
-        Me.AcceptButton = Me.btnCalc
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnExit
-        Me.ClientSize = New System.Drawing.Size(454, 180)
+        Me.ClientSize = New System.Drawing.Size(386, 180)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
-        Me.Controls.Add(Me.btnCalc)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -229,13 +217,12 @@ Partial Class frmMain
     Friend WithEvents radSilver As RadioButton
     Friend WithEvents radBasic As RadioButton
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents chkLocal As CheckBox
     Friend WithEvents chkShow As CheckBox
     Friend WithEvents chkHBI As CheckBox
     Friend WithEvents chkCinema As CheckBox
-    Friend WithEvents btnCalc As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents txtTotal As TextBox
     Friend WithEvents btnClear As Button
+    Friend WithEvents chkLocal As CheckBox
 End Class
