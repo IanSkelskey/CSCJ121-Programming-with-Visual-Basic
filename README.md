@@ -2,6 +2,7 @@
 ## Tunxis Community College 
 
 ### Textbook: Programming with Microsoft Visual Basic 2017 - Diane Zak
+Colors Project - Page 44 - Exercise 4  
 Williams Solution - Page 176 - Exercise 10  
 History Solytion - Page 282 - Exercise 1  
 Cable Direct Solution - Page 284 - Exercise 11  
