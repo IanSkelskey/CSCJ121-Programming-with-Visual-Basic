@@ -4,6 +4,8 @@
 ### Textbook: Programming with Microsoft Visual Basic 2017 - Diane Zak
 #### Chapter 1: An Introduction to Visual Studio 2017  
 Colors Project - Page 44 - Exercise 4  
+#### Chapter 2: Planning Applications and Designing Interfaces
+Amlie Solution - Page 69 - Exercise 1  
 #### Chapter 4: The Selection Structure  
 Williams Solution - Page 176 - Exercise 10  
 #### Chapter 6: Sub and Function Procedures
